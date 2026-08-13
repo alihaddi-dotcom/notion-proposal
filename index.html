@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notion提案 | TAIMATSU 経理チーム向け</title>
+<meta name="description" content="ChatworkとNotionのちがい。経理の手順書と引き継ぎをNotionに置く提案です。">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="deck">
+
+<a class="skiplink" href="#main" data-i18n="a11y.skip">本文へスキップ</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">🔥</span>
+      <span class="brand-text">
+        <strong data-i18n="site.brand">TAIMATSU</strong>
+        <small data-i18n="site.brandSub">経理チームへの提案</small>
+      </span>
+    </div>
+
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="ja" class="is-active">日本語</button>
+        <button type="button" data-lang="en">English</button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="section-nav" aria-label="Sections">
+    <div class="nav-scroll" id="navScroll"></div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ============ COVER ============ -->
+  <section class="cover" id="top">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="cover.eyebrow">社内提案</p>
+      <h1 data-i18n="cover.title">書いたことが、あとで見つかるように</h1>
+      <p class="cover-sub" data-i18n="cover.subtitle">経理業務の手順書・引き継ぎ情報を、Notionで整理・共有する提案です</p>
+
+      <!-- data-i18n-html, not data-i18n: this lead carries paragraphs and a list -->
+      <div class="callout callout-lead" data-i18n-html="cover.lead">
+        <p>今日は、Notionを活用した情報共有についてご紹介します。</p>
+      </div>
+
+
+      <h2 class="h-small" data-i18n="cover.goalsTitle">30分後のゴール</h2>
+      <div class="grid grid-3" id="coverGoals"></div>
+
+      <h2 class="h-small" data-i18n="cover.agendaTitle">今日の流れ（30分）</h2>
+      <ol class="agenda" id="coverAgenda"></ol>
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="part" id="part1">
+    <div class="wrap">
+
+      <header class="part-head">
+        <p class="part-label" data-i18n="p1.label">Part 1</p>
+        <h2 data-i18n="p1.title">ChatworkとNotionは、何がちがうのか</h2>
+        <p class="part-lead" data-i18n="p1.lead">Chatworkは「話すためのツール」、Notionは「残すためのツール」です。</p>
+      </header>
+
+
+      <!-- 1.1 -->
+      <article class="chunk" id="s1-1">
+        <h3><span class="num">1.1</span> <span data-i18n="p1.s1.title">同じ情報でも、管理する場所で結果が変わる</span></h3>
+        <p class="lead" data-i18n="p1.s1.lead">同じことを書いても、そのあとの結果がちがいます。</p>
+
+        <div class="table-wrap">
+          <table class="map-table" id="compareTable"></table>
+        </div>
+
+        <div class="callout callout-key">
+          <p class="callout-title" data-i18n="ui.keyPoint">ポイント</p>
+          <p data-i18n="p1.s1.takeaway">Chatworkが悪いという話ではありません。</p>
+        </div>
+      </article>
+
+      <!-- 1.2 -->
+      <article class="chunk" id="s1-2">
+        <h3><span class="num">1.2</span> <span data-i18n="p1.s2.title">いま、何が起きているか</span></h3>
+        <p class="lead" data-i18n="p1.s2.lead">この2つは、思い当たる場面があるのではないでしょうか。</p>
+
+        <div class="grid grid-3" id="lossGrid"></div>
+      </article>
+
+      <!-- 1.3 -->
+      <article class="chunk" id="s1-3">
+        <h3><span class="num">1.3</span> <span data-i18n="p1.s3.title">属人化 — 課題になるのは、人が変わるとき</span></h3>
+        <p class="lead" data-i18n="p1.s3.lead">業務の進め方が特定の人しか分からない状態を「属人化」といいます。</p>
+
+        <div class="callout callout-key">
+          <p class="callout-title" data-i18n="ui.keyPoint">ポイント</p>
+          <p data-i18n="p1.s3.takeaway">書いてはいても、あとで見つけにくいのが実情です。</p>
+        </div>
+      </article>
+
+      <!-- recap -->
+      <article class="chunk" id="s1-4">
+        <div class="callout callout-recap">
+          <p class="callout-title" data-i18n="p1.recapTitle">Part 1 のまとめ</p>
+          <ul id="p1Recap"></ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="part part-alt" id="part2">
+    <div class="wrap">
+
+      <header class="part-head">
+        <p class="part-label" data-i18n="p2.label">Part 2</p>
+        <h2 data-i18n="p2.title">Notionでできること（4つだけ）</h2>
+        <p class="part-lead" data-i18n="p2.lead">Notionはチャットのツールではありません。</p>
+      </header>
+
+
+      <!-- 2.1 -->
+      <article class="chunk" id="s2-1">
+        <h3><span class="num">2.1</span> <span data-i18n="p2.s1.title">まずは、この4つだけ覚えれば十分です</span></h3>
+        <p class="lead" data-i18n="p2.s1.lead">上がNotionでの呼び方です。</p>
+
+        <div class="term-cards" id="conceptCards"></div>
+      </article>
+
+      <!-- 2.2 -->
+      <article class="chunk" id="s2-2">
+        <h3><span class="num">2.2</span> <span data-i18n="p2.s2.title">見せる相手は、ページごとに選べます</span></h3>
+        <p class="lead" data-i18n="p2.s2.lead">全員に見せてよいものと、そうでないものがあります。</p>
+      </article>
+
+      <!-- 2.3 -->
+      <article class="chunk" id="s2-3">
+        <h3><span class="num">2.3</span> <span data-i18n="p2.s3.title">社内ではもう使っています</span></h3>
+        <p class="lead" data-i18n="p2.s3.lead">エンジニアリングチームが、すでに毎日使っています。</p>
+      </article>
+
+      <!-- recap -->
+      <article class="chunk" id="s2-4">
+        <div class="callout callout-recap">
+          <p class="callout-title" data-i18n="p2.recapTitle">Part 2 のまとめ</p>
+          <ul id="p2Recap"></ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ PART 3 ============ -->
+  <section class="part" id="part3">
+    <div class="wrap">
+
+      <header class="part-head">
+        <p class="part-label" data-i18n="p3.label">Part 3</p>
+        <h2 data-i18n="p3.title">経理業務の、どの負担を減らせるか</h2>
+        <p class="part-lead" data-i18n="p3.lead">実際の業務がどう変わるかを、2つの場面で見ます。</p>
+      </header>
+
+
+      <!-- 3.1 -->
+      <article class="chunk" id="s3-1">
+        <h3><span class="num">3.1</span> <span data-i18n="p3.s1.title">場面1 — 質問されたとき</span></h3>
+        <p class="lead" data-i18n="p3.s1.lead">左が今のやり方、右がNotionを使った場合です。</p>
+
+        <div class="grid grid-3">
+          <div>
+            <h4 class="h-small" id="askNowLabel">いまのやり方</h4>
+            <ol class="step-list is-static" id="askNow"></ol>
+          </div>
+          <div>
+            <h4 class="h-small" id="askAfterLabel">Notionを使った場合</h4>
+            <ol class="step-list is-static" id="askAfter"></ol>
+          </div>
+        </div>
+
+        <div class="callout callout-key">
+          <p class="callout-title" data-i18n="ui.keyPoint">ポイント</p>
+          <p data-i18n="p3.s1.takeaway">書いて送るかわりに、リンクを送るだけです。</p>
+        </div>
+      </article>
+
+      <!-- 3.2 -->
+      <article class="chunk" id="s3-2">
+        <h3><span class="num">3.2</span> <span data-i18n="p3.s2.title">場面2 — 新しい担当者が入ったとき</span></h3>
+        <p class="lead" data-i18n="p3.s2.lead">手順が書いてあると、この形が変わります。</p>
+
+        <ol class="step-list is-static" id="onboardSteps"></ol>
+
+        <div class="callout callout-key">
+          <p class="callout-title" data-i18n="ui.keyPoint">ポイント</p>
+          <p data-i18n="p3.s2.takeaway">毎回かかっていた工数が、1回分に変わります。</p>
+        </div>
+      </article>
+
+      <!-- recap -->
+      <article class="chunk" id="s3-3">
+        <div class="callout callout-recap">
+          <p class="callout-title" data-i18n="p3.recapTitle">Part 3 のまとめ</p>
+          <ul id="p3Recap"></ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ PART 4 ============ -->
+  <section class="part part-alt" id="part4">
+    <div class="wrap">
+
+      <header class="part-head">
+        <p class="part-label" data-i18n="p4.label">Part 4</p>
+        <h2 data-i18n="p4.title">Notion AI — 探さずに、聞く</h2>
+        <p class="part-lead" data-i18n="p4.lead">整理した情報をどう取り出すかの話をします。</p>
+      </header>
+
+
+      <!-- 4.1 -->
+      <article class="chunk" id="s4-1">
+        <h3><span class="num">4.1</span> <span data-i18n="p4.s1.title">言葉を思い出せなくても、調べれば出てくる</span></h3>
+        <p class="lead" data-i18n="p4.s1.lead">Notion AIは、日本語の質問に日本語で答えます。</p>
+
+        <div class="term-cards" id="aiExamples"></div>
+
+        <div class="callout callout-note">
+          <p class="callout-title" data-i18n="p4.s1.caseTitle">実際にあった例</p>
+          <p data-i18n="p4.s1.case">実際に経理業務でNotionを活用している例があります。</p>
+        </div>
+      </article>
+
+      <!-- 4.2 -->
+      <article class="chunk" id="s4-2">
+        <h3><span class="num">4.2</span> <span data-i18n="p4.s2.title">1つだけ、大事な点があります</span></h3>
+        <p class="lead" data-i18n="p4.s2.lead">AIが答えられるのは、Notionの中に書いてあることだけです。</p>
+
+        <div class="callout callout-key">
+          <p class="callout-title" data-i18n="ui.keyPoint">ポイント</p>
+          <p data-i18n="p4.s2.takeaway">先にページを書く。AIが役に立つのは、そのあとです。</p>
+        </div>
+      </article>
+
+      <!-- recap -->
+      <article class="chunk" id="s4-3">
+        <div class="callout callout-recap">
+          <p class="callout-title" data-i18n="p4.recapTitle">Part 4 のまとめ</p>
+          <ul id="p4Recap"></ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ NEXT STEP ============ -->
+  <section class="part" id="next">
+    <div class="wrap">
+
+      <header class="part-head">
+        <p class="part-label" data-i18n="p5.label">次の一歩</p>
+        <h2 data-i18n="p5.title">心配なことと、今日決めたいこと</h2>
+        <p class="part-lead" data-i18n="p5.lead">よく出る心配を先に4つ挙げます。ここに挙げていない点は、ぜひお聞かせください。</p>
+      </header>
+
+
+      <!-- 5.1 -->
+      <article class="chunk" id="s5-1">
+        <h3><span class="num">5.1</span> <span data-i18n="p5.s1.title">よくある4つの心配</span></h3>
+
+        <div class="term-cards" id="objectionCards"></div>
+      </article>
+
+      <!-- 5.2 -->
+      <article class="chunk" id="s5-2">
+        <h3><span class="num">5.2</span> <span data-i18n="p5.s2.title">Notionでは管理しないもの</span></h3>
+        <p class="lead" data-i18n="p5.s2.lead">Notionで管理するのは、業務の進め方を書いた文書です。証憑や帳簿ではありません。</p>
+      </article>
+
+      <!-- 5.3 -->
+      <article class="chunk" id="s5-3">
+        <h3><span class="num">5.3</span> <span data-i18n="p5.s3.title">ChatworkとNotionは、自動ではつながりません</span></h3>
+        <p class="lead" data-i18n="p5.s3.lead">ここも事前に共有しておきます。つなぐのは人です。</p>
+      </article>
+
+      <!-- 5.4 -->
+      <article class="chunk" id="s5-4">
+        <h3><span class="num">5.4</span> <span data-i18n="p5.s4.title">まずは1つの業務で、4週間試してみませんか</span></h3>
+        <p class="lead" data-i18n="p5.s4.lead">全部を移す提案ではありません。</p>
+
+        <h4 class="h-small" data-i18n="p5.s5.title">どれを選びますか</h4>
+        <p class="lead" data-i18n="p5.s5.lead">今日、一緒に最初に試す業務を決めたいと思います。</p>
+        <div class="grid grid-3" id="pilotCards"></div>
+
+        <h4 class="h-small" data-i18n="p5.s6.title">4週間の進め方</h4>
+        <ol class="step-list is-static" id="pilotWeeks"></ol>
+
+        <div class="callout callout-close">
+          <p class="callout-title" data-i18n="p5.askTitle">今日、決めていただきたいこと</p>
+          <p data-i18n="p5.ask">A・B・Cのどれから試すか、そして書く担当を1人。</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p data-i18n="footer.note">TAIMATSU 社内提案資料 — 経理チーム向け</p>
+    <p class="footer-meta"><span data-i18n="footer.edit">内容の修正は</span> <code>assets/js/notion-content.js</code></p>
+  </div>
+</footer>
+
+<script src="assets/js/notion-content.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/shared.js"></script>
+<script src="assets/js/notion.js"></script>
+</body>
+</html>
