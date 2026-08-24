@@ -183,7 +183,7 @@ window.STR = {
       Shown only on notion.html?presenter
    -------------------------------------------------------------------------- */
 window.NOTES = {};  /* stripped for publication — the presenter notes are
-                       not shipped to a public page. See build-public.py */
+                       not shipped to a public page. See tools/build-public.py */
 
 /* --------------------------------------------------------------------------
    3. Structured content. Rendered by assets/js/notion.js
